@@ -2,6 +2,8 @@
 #include <chrono>
 #include <fstream>
 #include "CpuLife/cpuLife.h"
+#include "CudaLife/cudaLife.h"
+#include "OpenclLife/openclLife.h"
 
 // Devuelve la cantidad total de células evaluadas en una simulación
 size_t getEvaluatedCells(size_t width, size_t height, int iterations) {
@@ -9,6 +11,7 @@ size_t getEvaluatedCells(size_t width, size_t height, int iterations) {
 }
 
 int main() {
+    /*
     // Abrimos archivo de salida
     std::ofstream output("../resultados.txt");
     if (!output.is_open()) {
@@ -64,5 +67,12 @@ int main() {
     output.close();
     std::cout << "\nResultados guardados en resultados.txt\n";
 
+    */
+
+    //----
+    //runGameOfLifeGPU(64, 64, 100);
+    //----
+    std::cout << "Ejecutando Game of Life con OpenCL...\n";
+    runGameOfLifeOpenCL(64, 32, 100);
     return 0;
 }
