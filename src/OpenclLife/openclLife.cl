@@ -1,3 +1,5 @@
+typedef unsigned char uchar;
+
 __kernel void game_of_life(__global const uchar* data,
                            __global uchar* result,
                            const uint width,

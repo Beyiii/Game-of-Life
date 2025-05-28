@@ -24,3 +24,12 @@ add_executable(Game_of_Life
 
 # Copia el kernel OpenCL al directorio de salida (build)
 configure_file(src/OpenclLife/openclLife.cl openclLife.cl COPYONLY)
+
+# Incluir headers de OpenCL
+include_directories("C:/Users/Usuario/Desktop/U-Cursed/Semestre 11/Computación en GPU/OpenCL-SDK/include")
+
+# Directorio donde está OpenCL.lib
+link_directories("C:/Users/Usuario/Desktop/U-Cursed/Semestre 11/Computación en GPU/OpenCL-SDK/build/lib")
+
+# Enlaza contra la librería OpenCL
+target_link_libraries(Game_of_Life OpenCL)

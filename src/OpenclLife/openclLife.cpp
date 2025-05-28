@@ -52,7 +52,7 @@ void runGameOfLifeOpenCL(size_t width, size_t height, int iterations) {
     CHECK_CL(err, "clCreateBuffer d_result");
 
     // 5) Programa y kernel
-    std::string source = loadKernelSource("src/OpenclLife/openclLife.cl");
+    std::string source = loadKernelSource("openclLife.cl");
     const char* src = source.c_str();
     size_t length = source.size();
     cl_program program = clCreateProgramWithSource(context, 1, &src, &length, &err);
