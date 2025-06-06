@@ -11,5 +11,6 @@ void computeIterationSerial();
 const ubyte* getLifeData();
 void freeLife();
 size_t getEvaluatedCells();
+void runBenchmark();
 
 #endif // CPULIFE_H
